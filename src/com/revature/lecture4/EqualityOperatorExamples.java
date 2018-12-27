@@ -2,9 +2,10 @@ package com.revature.lecture4;
 
 public class EqualityOperatorExamples {
 	int myField = 0;
-	public EqualityOperatorExamples() {
-		
+	
+	public EqualityOperatorExamples() {	
 	}
+	
 	public EqualityOperatorExamples(int myField) {
 		this.myField = myField;
 	}
