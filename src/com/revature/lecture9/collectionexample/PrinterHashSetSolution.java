@@ -1,4 +1,4 @@
-package com.revature.lecture9;
+package com.revature.lecture9.collectionexample;
 
 import java.util.HashSet;
 import java.util.Iterator;
@@ -8,7 +8,7 @@ public class PrinterHashSetSolution {
 	Set<String> container;
 	
 	public PrinterHashSetSolution() {
-		container = new HashSet();
+		container = new HashSet<>();
 	}
 	
 	public void printContainer() {

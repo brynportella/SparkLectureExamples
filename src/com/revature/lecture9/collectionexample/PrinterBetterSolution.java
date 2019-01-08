@@ -1,4 +1,4 @@
-package com.revature.lecture9;
+package com.revature.lecture9.collectionexample;
 
 import java.util.ArrayList;
 import java.util.Iterator;

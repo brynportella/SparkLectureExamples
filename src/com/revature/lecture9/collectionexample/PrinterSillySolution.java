@@ -1,4 +1,4 @@
-package com.revature.lecture9;
+package com.revature.lecture9.collectionexample;
 
 public class PrinterSillySolution {
 	String[] container;
