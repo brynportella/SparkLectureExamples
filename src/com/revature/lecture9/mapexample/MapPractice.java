@@ -9,7 +9,7 @@ import static java.lang.Math.abs;
 
 public class MapPractice {
 	public static void main(String[] args) {
-		//Doesnt preserve insertion order 
+		//Doesn't preserve insertion order 
 		Map<Integer, String> myHashMap = new HashMap<>();
 		myHashMap.put(1, "A");
 		myHashMap.put(7, "E");
@@ -35,7 +35,7 @@ public class MapPractice {
 		
 		System.out.println("My weirdly sorted map");
 		
-		Map<Integer, String> myWeirdlySortedMap= new TreeMap(new SortByAbsoluteValue());
+		Map<Integer, String> myWeirdlySortedMap= new TreeMap<>(new SortByAbsoluteValue());
 		
 		myWeirdlySortedMap.putAll(myHashMap);
 		

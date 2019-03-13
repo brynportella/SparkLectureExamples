@@ -1,8 +1,8 @@
 package com.revature.lecture10.nodestructures;
 
-public class Node {
+public class Node <T> {
 	//Data 
-		
+		T data;
 	//Left Child
 	
 	//Right Child

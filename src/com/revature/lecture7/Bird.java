@@ -1,25 +1,41 @@
 package com.revature.lecture7;
 
-public class Bird extends Animal {
+public class Bird extends Animal implements Flyable{
 
 	@Override
-	public void eats() {
+	public void fly() {
+		System.out.println("Flap Flap flap!");
+	}
+
+	@Override
+	public void eats(){
 		// TODO Auto-generated method stub
-		isHungry = false;
+		hungry = false;
 		System.out.println("Yumm worms!");
+		
+		return;
+	}
+	
+	public void eats(String food) {
+		hungry = false;
+		
+		System.out.println("Thanks for the food "+food);
 	}
 
 	@Override
 	public void moves() {
-		// TODO Auto-generated method stub
+		fly();
 		System.out.println("fly little bird! fly");
 		
 	}
-
-	@Override
+	
+	
 	public void sleep() {
-		// TODO Auto-generated method stub
 		super.sleep();
+		System.out.println("tweet snore");
 	}
+	
+	
+
 
 }

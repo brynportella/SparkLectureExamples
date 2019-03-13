@@ -4,17 +4,15 @@ public class Node {
 	Integer data;
 	Node left;
 	Node right;
-	boolean hasChildren;
 	
 	public Node() {}
 	
 	//Constructor That takes in Data
 	public Node(Integer data) {
 		this.data = data;
-		hasChildren = false;
 	}
 	
-	//Setter for the Data 
+
 	public void setData(Integer data) {
 		this.data = data;
 	}
@@ -23,29 +21,28 @@ public class Node {
 		return data;
 	}
 	
-	//Setter for the left child
-	
+	//Set left with a node
 	public void setLeft(Node left) {
-		hasChildren = true;
 		this.left = left;
 	}
 	
+	//set left with just a data value 
 	public void setLeft(Integer i) {
-		hasChildren = true;
+		this.left = new Node(i);
 	}
 	
 	public Node getLeft() {
 		return left;
 	}
 	
+	//set right with a Node 
 	public void setRight(Node right) {
 		this.right = right;
-		hasChildren = true;
 	}
 	
+	//set right with just the data value 
 	public void setRight(Integer i) {
 		right = new Node(i);
-		hasChildren = true;
 	}
 	
 	public Node getRight() {

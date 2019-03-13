@@ -8,12 +8,15 @@ public class WhileLoopExamples {
 		 * while(false) {	
 		}
 		*/
-		/* Another example of unreachable code
+		
+		/*
+		// Another example of unreachable code
 		while (5 == 9) {
 		}
 		*/
 		int five = 5;
 		while (five == 9) {
+			//Dead code 
 			//this is okay because five is not a compile time constant
 		}
 		final int six = 6;
@@ -22,12 +25,16 @@ public class WhileLoopExamples {
 		while(six == 9) {
 		}
 		*/
+		
 		int growUpToTen = 0;
 		while(growUpToTen<=10) {
 			System.out.println(growUpToTen++);
+			System.out.println("hi");
 		}
+		
 		System.out.println("Final val of growUpToTen "+growUpToTen);
 		System.out.println("Now a do while loop that outputs the same thing");
+		
 		growUpToTen = 0;
 		//use a do while if you know that you want the code to execute at least once
 		do {

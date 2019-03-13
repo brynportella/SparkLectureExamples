@@ -7,34 +7,67 @@ public class BigOExample {
 	static ArrayList<Integer> data = new ArrayList<>();
 	
 	//static- constant time 
-	// O(1)
+	// O(1)+O(1)+O(1)+O(1)+O(1)= O(1)
 	static public void myMethod(Integer[] myList) {
 		System.out.println("Isn't this fun!"); //O(1)
-		System.out.println("This is the list size "+myList.length);//O(1)
-		System.out.println("I want to print some more instructions");
-		System.out.println("Are you tired of seeing print statements yet?");
+		System.out.println("This is the list size "+myList.length);//O(1)+O(1)
+		System.out.println("I want to print some more instructions");//O(1)
+		System.out.println("Are you tired of seeing print statements yet?");//O(1)
 	}
+	
+	
+	
+
+	
 	
 	//method to search for element assuming not sorted 
 	//what if we want to print all the elements out 
 	//what if we want to print them out as we found them
-	//O(n)
-	static public boolean myContains(Integer i) {
-		for(Integer curEle: data) {
-			System.out.println(curEle);
-		}
+
+	
+	//O(1)*n+ O(1)=> O(n)+O(n) => O(n^2)
+	static public boolean myContains(Integer i, ArrayList<Integer>data ) {
+
+		
+
 		System.out.println();
-		 for(Integer curEle: data) {
-			 if(curEle.equals(i)) {
-				 return true;
+		
+		
+		 for(Integer curEle: data) {//n
+			 
+			 if(curEle.equals(i)) {//O(1)
+				 return true;//O(1)
 			 }
+			 
+			 for(Integer subLoopEle: data) {//n
+					System.out.println(subLoopEle);//O(1)
+				}
 		 }
-		 return false; 
+		 
+		 return false; //O(1)
+		 
+		 
 	 }
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	//method to search for element assuming sorted list 
 	//binary search 
-	
+	//O(logn)
 	static public boolean binarySearch(Integer element) {
 		int left = 0;
 		int right = data.size();
@@ -67,9 +100,9 @@ public class BigOExample {
 		
 		System.out.println(data);
 		
-		System.out.println(myContains(5));//true
+		//System.out.println(myContains(5));//true
 		
-		System.out.println(myContains(8));//false
+		//System.out.println(myContains(8));//false
 		
 		//sort list 
 		BigOExample b = new BigOExample(); 

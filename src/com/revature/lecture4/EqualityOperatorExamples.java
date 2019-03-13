@@ -3,9 +3,13 @@ package com.revature.lecture4;
 public class EqualityOperatorExamples {
 	int myField = 0;
 	
+	//This is a constructor- we'll cover these 
+	//in lecture next week- they allow you to 
+	//instantiate an object 
 	public EqualityOperatorExamples() {	
 	}
 	
+	//this is another constructor
 	public EqualityOperatorExamples(int myField) {
 		this.myField = myField;
 	}
@@ -13,26 +17,35 @@ public class EqualityOperatorExamples {
 	
 	public static void main(String[] args) {
 		//Some things that aren't allowed
-		//boolean x = (true == 7); //doesn't compile 
+		char c = 250;
+		boolean x = (c == 7); //doesn't compile 
 
-		//boolean y = false != "some String"; //doesn't compile 
+		//boolean y = (false != "some String"); //doesn't compile
 
 		//boolean z = 3 == "some other string"; //doesn't compile 
 		
 		
 		//Object Equality 
+		//Here I create three EqualityOperatorExampleObjects
+		//they all have 9 as their only value
+		//However firstEx and secondEx point to different places
+		//in memory.
 		EqualityOperatorExamples firstEx = new EqualityOperatorExamples(9);
 		EqualityOperatorExamples secondEx = new EqualityOperatorExamples(9);
 		EqualityOperatorExamples thirdEx = secondEx;
 		
-		System.out.println(firstEx == secondEx);
-		System.out.println(thirdEx == secondEx);
+		
+		
+		//Compares the references - NOT THE VALUES
+		System.out.println(firstEx == secondEx);//false
+		System.out.println(thirdEx == secondEx);//true
 		
 		//Some things that are allowed (promotion of numeric types)
 		if(5.0 == 5) {
 			System.out.println("5.0 is == to 5");
 		}
 		
+		//Some weird stuff with char as a number
 		char two = 50;
 		System.out.println(two);
 		
